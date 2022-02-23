@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>詳細</h2>
+
+<h2>{{ post.title }}</h2>
+<p>{{ post.detail }}</p>
+<p>{{ post.due.date() }}</p>
+<a href="/delete/{{ post.id }}" role="button">削除</a>
+<a href="/update/{{ post.id }}" role="button">Update</a>
+{% endblock %}
